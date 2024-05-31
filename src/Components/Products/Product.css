@@ -1,0 +1,99 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color:white; /* White background */
+  }
+  
+  .whole {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    color: black;
+    min-height: 100vh; /* Ensure full height of viewport */
+  }
+  
+  .product-container {
+    text-align: center;
+    background-color: white;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    color:black;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  .product-details {
+    padding: 20px;
+    border-radius: 8px;
+    background-color: white;
+    color:black;
+  }
+  .images-and-colors-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    gap: 20px; /* Add spacing between image and color selection */
+  }
+  
+  .vehicle-image-container {
+    flex: 1; /* Take up remaining space */
+    background-color: white;
+    margin-top: 60px;
+  }
+  
+  .vehicle-image {
+    width: 100%;
+    max-width: 400px; /* Limit image width */
+    height: auto;
+    border-radius: 10px;
+    background-color: white;
+    transition: transform 0.3s ease; /* Image transition on hover */
+  }
+  
+  .color-selection-container {
+    display: flex;
+    margin-left: 40px;
+    justify-content: center;
+    background-color: white;
+    gap: 10px; /* Add spacing between buttons */
+  }
+  
+  .color-button {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    cursor:pointer ;
+    transition: transform 0.1s ease, background-color 0.1s ease; /* Button animation */
+  }
+  
+  .color-button.selected {
+    background-color: white;
+    transform: scale(1.2); /* Increase button size on selection */
+  }
+  
+  .product-details-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Add box shadow for depth */
+  }
+  
+  /* Media query for responsiveness */
+  @media (max-width: 768px) {
+    .images-and-colors-container {
+      flex-direction: column; /* Stack elements vertically on smaller screens */
+      align-items: center;
+      background-color: white;
+    }
+  }

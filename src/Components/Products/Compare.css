@@ -1,0 +1,306 @@
+/* Fonts
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@400;700&display=swap');
+
+
+body {
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+  background-color: #FFFFFF;
+  color: #131313;
+  z-index: 50;
+}
+
+.full-height {
+}
+
+.container {
+  margin-top: -90px;
+  display: flex;
+  height: calc(100vh - 130px);
+  z-index: 50;
+}
+
+.left-panel {
+  flex: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #FFFFFF; 
+}
+
+.front-line {
+  padding: 0 0 0 40px;
+  background-color: #FFFFFF; 
+  border-radius: 10px;
+}
+
+.front-line p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 3rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3); 
+  margin: 0;
+}
+
+.dynamic-word {
+  color: #F9ED32;
+  animation: glow 1.5s infinite alternate; 
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+  }
+  to {
+    text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4);
+  }
+}
+
+.right-panel {
+  flex: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background-color: #FFFFFF; 
+  z-index: 50;
+  position: relative;
+}
+
+.vehicle-photos {
+  width: 100%;
+  height: calc(100vh - 130px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.slide {
+  width: 100%;
+  height: auto;
+  display: none;
+}
+
+.slide.active {
+  display: block;
+}
+
+.slide img {
+  width: 100%;
+  height: auto;
+}
+
+.checkout-button {
+  position: absolute;
+  bottom: 20px; 
+  right: 20px; 
+  padding: 10px 20px;
+  background-color: #f3e859;
+  color: #131313;
+  border: none;
+  border-radius: 5px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+.checkout-button:hover {
+  background-color: #d1c305;
+}
+
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    height: auto;
+    margin-top: 0;
+  }
+
+  .left-panel, .right-panel {
+    flex: 100%;
+  }
+
+  .front-line {
+    padding: 20px;
+    text-align: center;
+  }
+
+  .vehicle-photos {
+    height: auto;
+  }
+
+  .checkout-button {
+    position: relative;
+    margin:0 40px;
+    top: auto;
+    left: auto;
+  }
+} */
+
+body {
+    background-color: white;
+    margin: 0;
+  }
+  
+  .whole {
+    background-color: white;
+  }
+  
+  .comparison-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: white;
+  }
+  
+  .vehicle-comparison {
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px;
+    width: calc(33.333% - 40px); /* Ensure three boxes fit in one row with margins */
+    box-sizing: border-box; /* Ensure padding and border are included in width */
+  }
+  
+  .spec-item {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 300;
+    font-family: 'Poppins', sans-serif;
+    background-color: white;
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .spec-label {
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    background-color: white;
+  }
+  
+  .spec-value {
+    margin-left: 10px;
+    background-color: white;
+  }
+  
+  .comparison-container {
+    display: flex;
+    flex-wrap: wrap; /* Ensure items wrap to next line if necessary */
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 20px;
+    font-weight: 300;
+    background-color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+  }
+  
+  @keyframes oscillate {
+    0% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(-5px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+  .image-slideshow {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 20px;
+    background: white;
+    overflow-x: auto;
+    padding-bottom: 10px;
+  }
+  
+  .image-slideshow img {
+    width: 340px;
+    height: auto;
+    border-radius: 8px;
+    animation: oscillate 2s ease infinite;
+  }
+  
+  .image-slideshow img:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    animation: oscillate 2s ease infinite;
+  }
+  
+  @media (max-width: 1024px) {
+    .comparison-container {
+      flex-direction: column; /* Stack items vertically */
+      align-items: center;
+    }
+  
+    .vehicle-comparison {
+      margin: 20px 0;
+      width: 100%; /* Full width on smaller screens */
+      max-width: 600px;
+    }
+  
+    .image-slideshow {
+      justify-content: center;
+    }
+  
+    .image-slideshow img {
+      width: 100%;
+      max-width: 600px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .comparison-page {
+      padding: 10px;
+    }
+  
+    .vehicle-comparison {
+      padding: 15px;
+      margin-right: 0;
+      margin-bottom: 20px;
+      width: 100%;
+      max-width: 100%;
+    }
+  
+    .spec-item {
+      font-size: 16px;
+      margin-bottom: 8px;
+    }
+  
+    .image-slideshow {
+      max-width: 100%;
+    }
+  
+    .image-slideshow img {
+      width: 100%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .comparison-page {
+      padding: 5px;
+    }
+  
+    .vehicle-comparison {
+      padding: 10px;
+      max-width: 300px;
+    }
+  
+    .spec-item {
+      font-size: 14px;
+      margin-bottom: 6px;
+    }
+  
+    .image-slideshow img {
+      width: 80px;
+    }
+  }
